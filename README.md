@@ -1,1 +1,1 @@
-# TCC 1 > Arquitetura Hibrida para Armazenamento em IoT
+# TCC 1: Arquitetura Híbrida para Armazenamento em IoT
