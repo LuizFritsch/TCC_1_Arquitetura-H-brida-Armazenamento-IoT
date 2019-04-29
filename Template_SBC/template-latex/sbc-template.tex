@@ -2,12 +2,9 @@
 
 \usepackage{sbc-template}
 \usepackage{graphicx,url}
+\usepackage[portuguese]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[brazil]{babel}
-\usepackage[latin1]{inputenc}  
 
-     
-\sloppy
 
 \title{Arquitetura Híbrida para Armazenamento de Dados em Internet das Coisas}
 \author{Luiz G. Fritsch\inst{1}}
@@ -24,11 +21,7 @@
 \maketitle
 
 \begin{abstract}
-  This meta-paper describes the style to be used in articles and short papers
-  for SBC conferences. For papers in English, you should add just an abstract
-  while for the papers in Portuguese, we also ask for an abstract in
-  Portuguese (``resumo''). In both cases, abstracts should not have more than
-  10 lines and must be in the first page of the paper.
+  
 \end{abstract}
      
 \begin{resumo} 
@@ -38,42 +31,49 @@
 
 \section{Introdução}
 
-Internet das coisas tem como princípio a conectividade de dispositivos, não apenas como em geral acontece hoje com computadores e smartphones, mas com todo tipo de dispositivo, sejam eles sensores como um sensor de umidade do solo,  ou até mesmo objetos do nosso cotidiano, como torradeiras, cafeteiras e geladeiras.\\
-Estes dispositivos que antes eram simples objetos estáticos e com uma função específica, agora se tornam cada vez mais “inteligentes” e acabam sendo usados como uma fonte de dados que podem ser analisados para melhorar o nosso dia-a-dia.\\
-Esta alta variedade de dispositivos geram dados dos mais diversos tipos e em um volume muito grande. Surge então o problema de descobrir um local adequado não só para se armazenar estes dados, mas para também que seja eficiente quando for necessário realizar consultas. (Elaborar mais)\\
-Para este problema de armazenamento, surgem soluções como o armazenamento em nuvem, que, segundo a empresa Amazon, “é um modelo de computação em nuvem que armazena dados na Internet por meio de um provedor de computação na nuvem, que gerencia e opera o armazenamento físico de dados como serviço”[1]. Temos também o armazenamento In The Edge, que se resume em armazenar os dados nos próprios dispositivos para reduzir os custos de banda larga com transmissão de dados. \\
-Como engatar DB`s NoSQL aqui?\\
-“Bases de dados NoSQL (originalmente se referindo a "no SQL": "não SQL" ou "não relacional", posteriormente estendido para Not Only SQL - Não Somente SQL) é um termo genérico que representa os bancos de dados não relacionais“[2]. Estas bases de dados surgiram a partir da necessidade de grandes empresas como Google, Facebook e Amazon (Não se limitando a apenas estas) tratarem de grandes volumes de dados.
+Internet das coisas tem como princípio a conectividade de dispositivos, não apenas como em geral acontece hoje com computadores e \textit{smartphones}, mas com todos os tipos de dispositivo, sejam eles sensores, como um sensor de umidade do solo,  ou até mesmo objetos do nosso cotidiano, como torradeiras, cafeteiras e geladeiras. Estes dispositivos que antes eram simples objetos estáticos e com uma função específica, agora se tornam cada vez mais “inteligentes” e acabam sendo usados como uma fonte de dados que podem ser analisados para melhorar o nosso dia-a-dia.\\
+Esta alta variedade de dispositivos gera dados dos mais diversos tipos e em um volume muito grande. Surge então o problema de descobrir um local adequado, não só para se armazenar estes dados, mas também para que eles sejam eficientes quando for necessário realizar consultas.\\
+Para esse problema de armazenamento surgem soluções como o armazenamento em nuvem, que, segundo a empresa \textit{Amazon}, “é um modelo de computação em nuvem que armazena dados na Internet por meio de um provedor de computação na nuvem, que gerencia e opera o armazenamento físico de dados como serviço”[1]. Temos também o armazenamento \textit{In The Edge}, que se resume em armazenar os dados nos próprios dispositivos para reduzir os custos de banda larga com transmissão de dados. \\
+“Bases de dados \textit{NoSQL} (originalmente se referindo a \textit{no SQL}: "não SQL" ou "não relacional", posteriormente estendido para \textit{Not Only SQL} - Não Somente SQL) é um termo genérico que representa os bancos de dados não relacionais“[2]. Estas bases de dados surgiram a partir da necessidade de grandes empresas como \textit{Google}, \textit{Facebook} e \textit{Amazon} de tratarem grandes volumes de dados.
 Outra solução também são os modelos híbridos de armazenamento que utilizam de várias soluções como estas para resolver um problema.\\
-(Descrever mais todas estas soluções, talvez?)
-Neste trabalho, será apresentado uma proposta de arquitetura híbrida de armazenamento para internet das coisas, utilizando múltiplas bases de dados NoSQL
+Neste trabalho, será apresentado uma proposta de arquitetura híbrida de armazenamento para internet das coisas, utilizando múltiplas bases de dados \textit{NoSQL}.
+
 
 \section{Motivação} \label{sec:Motivação}
 
 
-\section{Objetivos gerais}
+\section{Objetivos}
+Os objetivos que norteiam esse trabalho são apresentados nos itens  3.1 e 3.2, respectivamente.
 
 
+\subsection{Objetivos gerais}
 
-\section{Objetivos específicos}
+\subsection{Objetivos específicos}
+\begin{itemize}
+   \item Avaliar o desempenho de bases de dados \textit{NoSQL} utilizando diferentes tipos de dados de diversos tamanhos.
+   \item Desenvolver uma \textit{API} híbrida para armazenamento de dados de sensores.
+ \end{itemize}
 
 
 
 \section{Fundamentação teórica}
 
 
-
 \section{Metodologia}
+\subsection{Seleção das base de dados}
+Foi realizado uma pesquisa em sites que tratavam sobre as melhores bases de dados \textit{Nosql} para se utilizar independente do domínio. O objetivo era localizar as bases que eram mais citadas, logo, se a base era citada, contabilizava um ponto. Ao total, foram visitados 12 sites, destes 12 sites, foi contabilizado um total de 28 bases citadas. 
+\subsection{Critérios para seleção das bases de dados}
+O critério para filtrar as bases de dados que foram utilizadas, foi verificar se ela era citada em ao menos 50\% dos sites que foram utilizados.  Das 28 bases que foram localizadas primeiramente, após a aplicação do critério de exclusão, restaram apenas 7 bases de dados.
+\subsection{Ambiente}
+Os experimentos foram realizados em um computador com processador \textit{AMD Ryzen} 5 1600 com frequência base de 3.2ghz e 19mb de \textit{cache}, Memória \textit{RAM} de 8GB operando a 2400MHz de frequência. O sistema operacional que foi utilizado foi o Ubuntu 16.04.
+\subsection{Dados utilizados}
 
 
 
 \section{Resultados Preliminares}
 
 
-
 \section{Figures and Captions}\label{sec:figs}
-
-
 
 
 \begin{figure}[ht]
